@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+    <Grid RowDefinitions="90,*"
+          BackgroundColor="{AppThemeBinding Light=White, Dark=Black}">
+        <VerticalStackLayout Grid.Row="0">
+            <Label x:Name="ExpressionLabel"
+                   LineBreakMode="NoWrap"
+                   FontSize="18"
+                   TextColor="{StaticResource Gray500}" />
+            <Label x:Name="ResultLabel"
+                   LineBreakMode="NoWrap"
+                   FontSize="36"
+                   TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"
+                   Text="0" />
+        </VerticalStackLayout>
+
+        <Grid RowDefinitions="*,*,*,*,*"
+              RowSpacing="5"
+              ColumnDefinitions="*,*,*,*"
+              ColumnSpacing="5"
+              Grid.Row="1">
+            <Button Text="%"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="7"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="4"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="1"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="."
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Pressed="CalculatorBtn_OnPressed" />
+
+            <Button Text="()"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="8"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="5"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="2"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="0"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Pressed="CalculatorBtn_OnPressed" />
+
+            <Button Text="C"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="9"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="6"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="3"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="="
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    TextColor="{StaticResource White}" 
+                    BackgroundColor="{StaticResource Primary}"
+                    Pressed="CalculatorBtn_OnPressed" />
+
+            <Button Text="&#x232B;"
+                    Grid.Row="0"
+                    Grid.Column="3" 
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="&#x00F7;"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="&#x00D7;"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="-"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Pressed="CalculatorBtn_OnPressed" />
+            <Button Text="+"
+                    Grid.Row="4"
+                    Grid.Column="3"
+                    Pressed="CalculatorBtn_OnPressed" />
+        </Grid>
+    </Grid>
+
+</ContentPage>
