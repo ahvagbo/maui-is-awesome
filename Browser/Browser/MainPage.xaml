@@ -4,19 +4,35 @@
              x:Class="Browser.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <Grid RowDefinitions="60,*">
-        <Grid ColumnDefinitions="60,60,60,*"
+    <Grid RowDefinitions="45,*">
+        <Grid ColumnDefinitions="60,60,90,*,60"
                     Grid.Row="0">
-            <Button Text="B" Grid.Column="0" />
-            <Button Text="F" Grid.Column="1" />
-            <Button Text="R" Grid.Column="2" />
-            <Entry Placeholder="Enter a URL"
+            <Button x:Name="BackBtn"
+                    Text="&#x2190;"
+                    Pressed="BackBtn_Pressed"
+                    Grid.Column="0" />
+            <Button x:Name="ForwardBtn"
+                    Text="&#x2192;"
+                    Pressed="ForwardBtn_Pressed"
+                    Grid.Column="1" />
+            <Button x:Name="RefreshBtn"
+                    Text="Refresh"
+                    Pressed="RefreshBtn_Pressed"
+                    Grid.Column="2" />
+            <Entry x:Name="UrlEntry"
+                   Placeholder="Enter a URL"
                    PlaceholderColor="{ AppThemeBinding Light={StaticResource Gray300}, Dark=WhiteSmoke }"
                    Keyboard="Url"
                    Grid.Column="3" />
+            <Button x:Name="GoBtn"
+                    Text="Go"
+                    Pressed="GoBtn_Pressed"
+                    Grid.Column="4" />
         </Grid>
 
-        <WebView Source="https://www.bing.com"
+        <WebView x:Name="BrowserWebView"
+                 Source="https://www.bing.com"
+                 Navigated="BrowserWebView_Navigated"
                  Grid.Row="1" />
     </Grid>
 
