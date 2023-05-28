@@ -23,7 +23,7 @@
 		<ApplicationTitle>Browser</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.browser</ApplicationId>
+		<ApplicationId>com.iurie5100.mauiisawesome.browser</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
