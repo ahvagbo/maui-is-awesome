@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Browser.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="45,*">
+        <Grid ColumnDefinitions="45,45,45,*,50"
+                    Grid.Row="0">
+            <Button x:Name="BackBtn"
+                    Text="&#x2190;"
+                    Pressed="BackBtn_Pressed"
+                    Grid.Column="0" />
+            <Button x:Name="ForwardBtn"
+                    Text="&#x2192;"
+                    Pressed="ForwardBtn_Pressed"
+                    Grid.Column="1" />
+            <Button x:Name="RefreshBtn"
+                    Text="&#x21BB;"
+                    Pressed="RefreshBtn_Pressed"
+                    Grid.Column="2" />
+            <Entry x:Name="UrlEntry"
+                   Placeholder="Enter a URL"
+                   PlaceholderColor="{ AppThemeBinding Light={StaticResource Gray300}, Dark=WhiteSmoke }"
+                   Keyboard="Url"
+                   Completed="UrlEntry_Completed"
+                   Grid.Column="3" />
+            <Button x:Name="GoBtn"
+                    Text="Go"
+                    Pressed="GoBtn_Pressed"
+                    Grid.Column="4" />
+        </Grid>
+
+        <WebView x:Name="BrowserWebView"
+                 Source="https://www.bing.com"
+                 Navigated="BrowserWebView_Navigated"
+                 Grid.Row="1" />
+    </Grid>
+
+</ContentPage>
