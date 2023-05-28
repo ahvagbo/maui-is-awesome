@@ -23,6 +23,7 @@
                    Placeholder="Enter a URL"
                    PlaceholderColor="{ AppThemeBinding Light={StaticResource Gray300}, Dark=WhiteSmoke }"
                    Keyboard="Url"
+                   Completed="UrlEntry_Completed"
                    Grid.Column="3" />
             <Button x:Name="GoBtn"
                     Text="Go"

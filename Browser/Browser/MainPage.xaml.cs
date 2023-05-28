@@ -12,6 +12,14 @@
                 ForwardBtn.IsEnabled = false;
         }
 
+        private void Navigate()
+        {
+            BrowserWebView.Source = new UrlWebViewSource()
+            {
+                Url = UrlEntry.Text
+            };
+        }
+
         private void BrowserWebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
             if (BrowserWebView.CanGoBack)
@@ -26,26 +34,18 @@
         }
 
         private void BackBtn_Pressed(object sender, EventArgs e)
-        {
-            BrowserWebView.GoBack();
-        }
+            => BrowserWebView.GoBack();
 
         private void ForwardBtn_Pressed(object sender, EventArgs e)
-        {
-            BrowserWebView.GoForward();
-        }
+            => BrowserWebView.GoForward();
 
         private void RefreshBtn_Pressed(object sender, EventArgs e)
-        {
-            BrowserWebView.Reload();
-        }
+            => BrowserWebView.Reload();
 
         private void GoBtn_Pressed(object sender, EventArgs e)
-        {
-            BrowserWebView.Source = new UrlWebViewSource()
-            {
-                Url = UrlEntry.Text
-            };
-        }
+            => Navigate();
+
+        private void UrlEntry_Completed(object sender, EventArgs e)
+            => Navigate();
     }
 }
