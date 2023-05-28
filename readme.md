@@ -4,7 +4,7 @@ This repo contains some sample programs written in C# using the .NET MAUI platfo
 
 - [x] Calculator
 - [ ] Image Gallery
-- [ ] Browser
+- [x] Browser
 - [ ] Car Shop
 - [ ] Memory Game
 
