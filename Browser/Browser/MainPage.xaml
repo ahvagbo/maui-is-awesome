@@ -5,7 +5,7 @@
              Shell.NavBarIsVisible="False">
 
     <Grid RowDefinitions="45,*">
-        <Grid ColumnDefinitions="60,60,90,*,60"
+        <Grid ColumnDefinitions="45,45,45,*,50"
                     Grid.Row="0">
             <Button x:Name="BackBtn"
                     Text="&#x2190;"
@@ -16,7 +16,7 @@
                     Pressed="ForwardBtn_Pressed"
                     Grid.Column="1" />
             <Button x:Name="RefreshBtn"
-                    Text="Refresh"
+                    Text="&#x21BB;"
                     Pressed="RefreshBtn_Pressed"
                     Grid.Column="2" />
             <Entry x:Name="UrlEntry"
